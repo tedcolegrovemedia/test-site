@@ -11,6 +11,9 @@ if (admin_account()) {
 
 $error = null;
 $username = '';
+if (!is_dir(DATA_DIR . '/revisions')) {
+    @mkdir(DATA_DIR . '/revisions', 0755);
+}
 $writable = is_writable(DATA_DIR) && is_writable(DATA_DIR . '/revisions');
 
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
