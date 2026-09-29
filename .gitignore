@@ -1,0 +1,4 @@
+# Site data written at runtime
+/data/*.json.php
+/data/.*.lock
+/data/revisions/*
